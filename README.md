@@ -84,7 +84,7 @@ SignInLogs
 | order by TimeGenerated desc
 ```
 
-![Q01 Compromised Account](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q01_Compromised_Account.png)
+![Q01 Compromised Account](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q01_Compromised_Account.png)
 
 📷 *Evidence 1. Sign-in telemetry showing compromised account activity associated with Mark Smith.*
 
@@ -100,7 +100,7 @@ SignInLogs
 | order by TimeGenerated asc
 ```
 
-![Q02 Attacker Source IP](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q02_Attacker_Source_IP.png)
+![Q02 Attacker Source IP](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q02_Attacker_Source_IP.png)
 
 📷 *Evidence 2. Sign-in records identifying attacker source IP address `205.147.16.190` during the incident window.*
 
@@ -122,11 +122,11 @@ Mark's legitimate session originated from `172.175.65.103` in **Boydton, Virgini
 **Primary MFA-related error code:** `50074`  
 **MFA push attempts prior to success:** 3
 
-![Q04 MFA Denial Error Code](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q04_MFA_Denial_Error_Code.png)
+![Q04 MFA Denial Error Code](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q04_MFA_Denial_Error_Code.png)
 
 📷 *Evidence 3. MFA-related sign-in event showing denied or incomplete strong authentication attempts.*
 
-![Q05 MFA Fatigue Intensity](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q05_MFA_Fatigue_Intensity.png)
+![Q05 MFA Fatigue Intensity](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q05_MFA_Fatigue_Intensity.png)
 
 📷 *Evidence 4. Repeated MFA push activity consistent with MFA fatigue behavior.*
 
@@ -148,7 +148,7 @@ SignInLogs
 | distinct AppDisplayName
 ```
 
-![Q06 Application Accessed](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q06_Application_Accessed.png)
+![Q06 Application Accessed](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q06_Application_Accessed.png)
 
 📷 *Evidence 5. Successful application access records showing the attacker authenticated to Exchange Online services.*
 
@@ -166,11 +166,11 @@ SignInLogs
 | take 1
 ```
 
-![Q07 Attacker Operating System](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q07_Attacker_Operating_System.png)
+![Q07 Attacker Operating System](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q07_Attacker_Operating_System.png)
 
 📷 *Evidence 6. Device fingerprint data identifying Linux as the operating system used during attacker authentication.*
 
-![Q08 Attacker Browser](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q08_Attacker_Browser.png)
+![Q08 Attacker Browser](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q08_Attacker_Browser.png)
 
 📷 *Evidence 7. Browser fingerprint evidence showing Firefox 147.0 as the client used in the malicious session.*
 
@@ -206,7 +206,7 @@ CloudAppEvents
 | take 5
 ```
 
-![Q09 First Post-Auth Action](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q09_First_Post_Auth_Auction.png)
+![Q09 First Post-Auth Action](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q09_First_Post_Auth_Auction.png)
 
 📷 *Evidence 8. First post-authentication action recorded as `MailItemsAccessed`, indicating immediate mailbox reconnaissance.*
 
@@ -240,7 +240,7 @@ CloudAppEvents
 
 **Rule creation event type:** `New-InboxRule`
 
-![Q10 Rule Creation Method](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q10_Rule_Creation_Method.png)
+![Q10 Rule Creation Method](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q10_Rule_Creation_Method.png)
 
 📷 *Evidence 9. CloudAppEvents evidence showing inbox rule creation activity from the attacker session.*
 
@@ -250,19 +250,19 @@ Two inbox rules were created within a short time window. Both rule names were in
 
 ### Rule 1 — Email Exfiltration Rule
 
-![Q11 Forward Rule Name](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q11_Forward_Rule_Name.png)
+![Q11 Forward Rule Name](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q11_Forward_Rule_Name.png)
 
 📷 *Evidence 10. Malicious forwarding rule name configured as `.` to avoid casual detection.*
 
-![Q12 Forward Destination](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q12_Forward_Destination.png)
+![Q12 Forward Destination](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q12_Forward_Destination.png)
 
 📷 *Evidence 11. External forwarding destination configured as `insights@duck.com`.*
 
-![Q13 Forward Keywords](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q13_Forward_Keywords.png)
+![Q13 Forward Keywords](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q13_Forward_Keywords.png)
 
 📷 *Evidence 12. Financially themed trigger keywords used to capture invoice and payment-related messages.*
 
-![Q14 Rule Processing Flag](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q14_Rule_Processing_Flag.png)
+![Q14 Rule Processing Flag](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q14_Rule_Processing_Flag.png)
 
 📷 *Evidence 13. `StopProcessingRules` enabled to suppress additional mailbox rule processing.*
 
@@ -279,11 +279,11 @@ This rule silently forwarded financially relevant messages to an attacker-contro
 
 ### Rule 2 — Security Alert Deletion Rule
 
-![Q15 Delete Rule Name](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q15_Delete_Rule_Name.png)
+![Q15 Delete Rule Name](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q15_Delete_Rule_Name.png)
 
 📷 *Evidence 14. Malicious deletion rule name configured as `..` to remain visually inconspicuous.*
 
-![Q16 Delete Keywords](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q16_Delete_Keywords.png)
+![Q16 Delete Keywords](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q16_Delete_Keywords.png)
 
 📷 *Evidence 15. Security-related trigger keywords used to automatically remove warning and alert messages.*
 
@@ -313,15 +313,15 @@ EmailEvents
 | order by TimeGenerated asc
 ```
 
-![Q17 BEC Target](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q17_BEC_Target.png)
+![Q17 BEC Target](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q17_BEC_Target.png)
 
 📷 *Evidence 16. Email telemetry identifying the target recipient of the fraudulent BEC message.*
 
-![Q18 BEC Subject Line](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q18_BEC_Subject_Line.png)
+![Q18 BEC Subject Line](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q18_BEC_Subject_Line.png)
 
 📷 *Evidence 17. Subject line evidence showing invoice-thread hijacking using updated banking details.*
 
-![Q19 Email Direction](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q19_Email_Direction.png)
+![Q19 Email Direction](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q18_BEC_Subject_Line.png)
 
 📷 *Evidence 18. Message direction recorded as intra-organizational, allowing the email to bypass external filtering controls.*
 
@@ -360,7 +360,7 @@ CloudAppEvents
 | order by Application asc
 ```
 
-![Q21 Cloud App Accessed](https://raw.githubusercontent.com/chowdhuryrz/threat-hunts/main/scattered-invoice/scattered-invoice-screenshots/Q21_Cloud_App_Accessed.png)
+![Q21 Cloud App Accessed](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q21_Cloud_App_Accessed.png)
 
 📷 *Evidence 19. Cloud application activity showing attacker access extending beyond Exchange into SharePoint and OneDrive.*
 
