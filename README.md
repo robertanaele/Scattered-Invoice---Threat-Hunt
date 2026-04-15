@@ -1,4 +1,3 @@
-```markdown
 # Scattered-Invoice-Threat-Hunt
 
 # Scattered Invoice  
