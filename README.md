@@ -1,6 +1,6 @@
 # 🔍 Threat Hunts
 
-> Threat hunt reports and KQL investigation documentation by **Rohan** — Cybersecurity Analyst Intern at [Log(N) Pacific](https://lognpacific.com).
+> Threat hunt reports and KQL investigation documentation by **Robert** — Cybersecurity Analyst Intern at [Log(N) Pacific](https://lognpacific.com).
 
 Each report covers a real simulated incident end-to-end: from initial compromise through containment, with KQL queries, evidence screenshots, MITRE ATT&CK mappings, and analyst notes.
 
