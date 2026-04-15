@@ -23,8 +23,8 @@ Each hunt lives in its own self-contained folder:
 ├── README.md
 │
 ├── scattered-invoice/
-│   ├── report.md          # Full IR report with KQL queries and findings
-│   └── screenshots/       # Evidence screenshots from Microsoft Sentinel
+  ├── report.md          # Full IR report with KQL queries and findings
+  └── screenshots/       # Evidence screenshots from Microsoft Sentinel
 
 ```
 
