@@ -85,8 +85,7 @@ SignInLogs
 | order by TimeGenerated desc
 ```
 
-![Q01 Compromised Account](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q01_Compromised_Account.png)
-
+![Q01 Compromised Account](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/scattered-invoice/screanshoots/Q01_Compromised_Account.png)
 📷 *Evidence 1. Sign-in telemetry showing compromised account activity associated with Mark Smith.*
 
 ---
@@ -101,7 +100,7 @@ SignInLogs
 | order by TimeGenerated asc
 ```
 
-![Q02 Attacker Source IP](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q02_Attacker_Source_IP.png)
+![Q02 Attacker Source IP](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/scattered-invoice/screanshoots/Q02_Attacker_Source_IP.png)
 
 📷 *Evidence 2. Sign-in records identifying attacker source IP address `205.147.16.190` during the incident window.*
 
@@ -123,7 +122,7 @@ Mark's legitimate session originated from `172.175.65.103` in **Boydton, Virgini
 **Primary MFA-related error code:** `50074`  
 **MFA push attempts prior to success:** 3
 
-![Q04 MFA Denial Error Code](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/img/Q04_MFA_Denial_Error_Code.png)
+![Q04 MFA Denial Error Code](https://github.com/robertanaele/Scattered-Invoice---Threat-Hunt/blob/main/scattered-invoce/screenshoots/Q04_MFA_Denial_Error_Code.png)
 
 📷 *Evidence 3. MFA-related sign-in event showing denied or incomplete strong authentication attempts.*
 
