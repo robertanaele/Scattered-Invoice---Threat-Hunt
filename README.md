@@ -1,6 +1,4 @@
 # Scattered-Invoice-Threat-Hunt
-
-# Scattered Invoice  
 ## Business Email Compromise (BEC) — Incident Response Report
 
 **Analyst:** Robert Anaele  
